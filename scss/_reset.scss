@@ -1,0 +1,32 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+    /*outline:1px solid rgb(0, 191, 255);*/
+  }
+  
+  /*全站設定*/
+  body{
+    font-family: "Roboto","Noto Sans TC";
+    line-height: 1.5;
+
+  }
+  a{
+      text-decoration: none;
+      color: #fff;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  span{
+    vertical-align: middle;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  .container {
+    max-width: 1320px; // 1296 + 12 + 12
+    margin: 0 auto;
+    padding: 0 12px;
+   }
+  
