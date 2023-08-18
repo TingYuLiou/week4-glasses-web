@@ -346,7 +346,7 @@ h4 {
 .contract label {
   margin-bottom: 8px;
 }
-.contract input {
+.contract input, .contract textarea {
   background: none;
   outline: none;
   border: 1px solid #000;
