@@ -5,7 +5,11 @@
   background: #AA0601;
   padding: 25px 36px;
   @include pad{
+    padding: 16px 36px;
+  }
+  @include mobile{
     padding: 0px;
+    flex-direction: column;
   }
   .container{
     padding: 12px 0;
@@ -92,8 +96,11 @@
 .feature{
   background: #FBF2F2;
   .card{
-    max-width: 306px;
+    max-width: 20%;
     margin: 0 auto;
+      @include pad{
+        max-width: 40%;
+    }
     @include mobile{
       max-width: 100%;
     }
@@ -127,26 +134,35 @@
     color:#fff;
     }
   .card-list{
+    display: flex;
     gap: 0px;
+  }
+  .card{
+    width: 50%;
   }
   @include pad{
     .card-list{
       flex-direction: column;
       }
     .card{
+      width: 100%;
       margin-bottom: 24px;
      }
    }
 }
 .customer-rec{
+
   .card{
-    max-width: 306px;
+    max-width: 23%;
     box-shadow: 0px 2px 6px #00000029;
     border: 1px solid #DEE2E6;
     border-radius: 4px;
     overflow: cover;
     position: relative;
     flex-grow: 1;
+    img{
+      width: 100%;
+    }
     }
   .card-text{
     padding: 16px;

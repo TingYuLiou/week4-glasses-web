@@ -139,7 +139,13 @@ h4 {
 }
 @media (max-width: 992px) {
   .header {
+    padding: 16px 36px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
     padding: 0px;
+    flex-direction: column;
   }
 }
 .header .container {
@@ -240,8 +246,13 @@ h4 {
   background: #FBF2F2;
 }
 .feature .card {
-  max-width: 306px;
+  max-width: 20%;
   margin: 0 auto;
+}
+@media (max-width: 992px) {
+  .feature .card {
+    max-width: 40%;
+  }
 }
 @media (max-width: 767px) {
   .feature .card {
@@ -274,25 +285,33 @@ h4 {
   color: #fff;
 }
 .co-branding .card-list {
+  display: flex;
   gap: 0px;
+}
+.co-branding .card {
+  width: 50%;
 }
 @media (max-width: 992px) {
   .co-branding .card-list {
     flex-direction: column;
   }
   .co-branding .card {
+    width: 100%;
     margin-bottom: 24px;
   }
 }
 
 .customer-rec .card {
-  max-width: 306px;
+  max-width: 23%;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1607843137);
   border: 1px solid #DEE2E6;
   border-radius: 4px;
   overflow: cover;
   position: relative;
   flex-grow: 1;
+}
+.customer-rec .card img {
+  width: 100%;
 }
 .customer-rec .card-text {
   padding: 16px;
@@ -505,6 +524,9 @@ h4 {
 .serise-bar li:hover {
   border-bottom: 8px solid #AA0601;
 }
+.serise-bar .sunglasses {
+  border-bottom: 8px solid #AA0601;
+}
 .serise-bar a {
   font-size: 32px;
   font-weight: bold;
@@ -636,6 +658,10 @@ h4 {
   background: #000;
 }
 .page a:active {
+  color: #fff;
+  background: #AA0601;
+}
+.page .page1 {
   color: #fff;
   background: #AA0601;
 }
