@@ -89,6 +89,7 @@ img {
   padding: 0 12px;
 }
 
+/* mixin*/
 /*text*/
 h1, h2, h3, h4 {
   color: #650300;
@@ -126,14 +127,9 @@ h4 {
 /*card-list*/
 .card-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-}
-@media (max-width: 992px) {
-  .card-list {
-    width: 100%;
-    flex-wrap: wrap;
-  }
 }
 
 /*網站樣式*/
@@ -141,7 +137,7 @@ h4 {
   background: #AA0601;
   padding: 25px 36px;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .header {
     padding: 0px;
   }
@@ -153,8 +149,8 @@ h4 {
 }
 @media (max-width: 767px) {
   .header .container {
+    padding-bottom: 0;
     flex-direction: column;
-    padding: 0px;
   }
 }
 .header .menu {
@@ -315,9 +311,6 @@ h4 {
   bottom: 16px;
 }
 @media (max-width: 992px) {
-  .customer-rec {
-    flex-wrap: wrap;
-  }
   .customer-rec .card {
     max-width: 47%;
   }
@@ -378,6 +371,13 @@ h4 {
   .contract .wrap .contract-text {
     font-size: 16px;
   }
+}
+@media (max-width: 992px) and (max-width: 767px) {
+  .contract .wrap {
+    padding: 0px;
+  }
+}
+@media (max-width: 992px) {
   .contract input[type=submit] {
     max-width: 100%;
   }
@@ -457,7 +457,7 @@ h4 {
   margin-top: 32px;
 }
 .footer .copyright a {
-  display: block;
+  display: inline;
 }
 .footer .copyright a:hover {
   text-decoration: underline;
@@ -473,7 +473,7 @@ h4 {
     display: block;
     margin-top: 16px;
   }
-  .footer .copyright p, .footer .copyright span {
+  .footer .copyright a, .footer .copyright p, .footer .copyright span {
     display: block;
     margin-bottom: 8px;
   }
@@ -507,6 +507,7 @@ h4 {
 }
 .serise-bar a {
   font-size: 32px;
+  font-weight: bold;
   display: block;
   color: #000000;
   padding: 24px 0;
@@ -516,37 +517,31 @@ h4 {
     font-size: 24px;
   }
 }
+@media (max-width: 992px) {
+  .serise-bar {
+    padding: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .serise-bar a {
+    font-size: 16px;
+  }
+}
 
 .serise-bn {
   display: flex;
   margin-bottom: 80px;
 }
-.serise-bn img {
-  overflow: contain;
+.serise-bn picture {
+  max-height: 296px;
 }
-@media (max-width: 992px) {
-  .serise-bn .img-1, .serise-bn .img-2 {
-    height: 296px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-  .serise-bn .img-1 {
-    background-image: url(/image/product-header-sm-3.png);
-  }
-  .serise-bn .img-2 {
-    background-image: url(/image/product-header-sm-4.png);
-  }
-  .serise-bn img {
-    opacity: 0;
-  }
+.serise-bn img {
+  overflow: cover;
 }
 @media (max-width: 767px) {
-  .serise-bn {
-    margin-bottom: 40px;
-  }
-  .serise-bn .img-1, .serise-bn .img-2 {
-    background-size: 165%;
-    background-position: center;
+  .serise-bn img {
+    max-height: 136px;
+    size: 120%;
   }
 }
 
@@ -560,6 +555,11 @@ h4 {
 .content .title p {
   font-size: 32px;
   margin-bottom: 32px;
+}
+@media (max-width: 767px) {
+  .content .title h4, .content .title p {
+    font-size: 24px;
+  }
 }
 .content .card-list {
   display: flex;
@@ -620,20 +620,24 @@ h4 {
     margin-top: 40px;
   }
 }
-@media (max-width: 776px) {
+@media (max-width: 767px) {
   .page {
     margin-bottom: 64px;
   }
 }
 .page a {
   color: #555555;
-  padding: 12px 16px;
+  padding: 12px 12px;
   border: 1px solid #555555;
   border-right: none;
 }
 .page a:hover {
   color: #fff;
   background: #000;
+}
+.page a:active {
+  color: #fff;
+  background: #AA0601;
 }
 .page .border-right {
   border-right: 1px solid #555555;

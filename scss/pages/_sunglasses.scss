@@ -12,43 +12,37 @@
     }
     a{
         font-size: 32px;
+        font-weight: bold;
         display: block;
         color:#000000;
         padding: 24px 0;
-        @media (max-width:992px) {
+        @include pad{
             font-size: 24px;
         }
     }
+    @include pad{
+    padding: 0px;
+    }
+    @include mobile{
+        a{
+            font-size: 16px;
+        }
+        }
 }
 .serise-bn{
     display: flex;
     margin-bottom: 80px;
+    picture{
+        max-height: 296px;
+    }
     img{
-        overflow: contain;
+        overflow: cover;
     }
-    @media (max-width:992px) {
-        .img-1, .img-2{
-            height: 296px;
-            background-repeat: no-repeat;
-            background-size: 100%;
+    @include mobile{
+        img{
+            max-height: 136px;
+            size: 120%;
         }
-        .img-1{
-            background-image: url("../image/product-header-sm-3.png");
-        }
-        .img-2{
-            background-image: url("../image/product-header-sm-4.png");
-         }
-         img{
-            opacity: 0;
-         }
-    }
-    @media (max-width:767px) {
-        margin-bottom: 40px;
-        .img-1, .img-2{
-        background-size: 165%;
-        background-position: center;
-        }
-
     }
 }
 
@@ -63,6 +57,11 @@
             font-size: 32px;
             margin-bottom: 32px;
         }
+        @include mobile{
+            h4,p{
+            font-size: 24px;
+            }
+        }
     }
     .card-list{
         display: flex;
@@ -72,11 +71,11 @@
     .card{
         width: 30%;
         margin-bottom: 80px;
-        @media (max-width:992px) {
+        @include pad{
             width: 48%;
             margin-bottom: 40px;
         }
-        @media (max-width:767px) {
+        @include mobile{
             width: 100%;
             margin-bottom: 24px;
         }
@@ -115,20 +114,24 @@
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-    @media (max-width:992px) {
+    @include pad{
         margin-top: 40px;
     }
-    @media (max-width:776px) {
+    @include mobile{
         margin-bottom: 64px;
     }
     a{
         color: #555555;
-        padding: 12px 16px;
+        padding: 12px 12px;
         border:1px solid #555555;
         border-right: none;
         &:hover{
             color: #fff;
             background: #000;
+        }
+        &:active{
+            color: #fff;
+            background: #AA0601;
         }
     }
     .border-right{
